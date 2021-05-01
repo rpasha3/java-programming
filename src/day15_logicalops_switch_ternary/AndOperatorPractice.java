@@ -1,0 +1,1 @@
+package day15_logicalops_switch_ternary;
