@@ -6,7 +6,26 @@ public class Address {
    private String state;
    private String zipCode;
    private String country = "USA";
+    //constructor
+    public Address() {
+        System.out.println("Address constructor");
+        street = "123 Unknown st";
+        city = "Unknown";
+        state = "Unknown";
+        zipCode= "00000";
 
+    }
+
+    //public Address street, city, state, zip
+    //second constructor, overloaded constructor -> provides shortcut to initialize variables in same statement.
+    // ex: Address ad = new Address("123 Java st", "Boston", "MA", "43212");
+    public Address(String street, String city, String state, String zipCode) {
+        this.street=street;
+        setStreet(street); //reuse the code in the setter method
+        this.city = city;
+        this.state = state;
+        this.zipCode = zipCode;
+    }
 
     public String toString() {
         return street + ", " + city + ", " + state + " " + zipCode;
